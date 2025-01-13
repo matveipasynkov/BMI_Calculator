@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	fmt.Printf("First Program")
+	const IMTPower = 2
+	userHeight, userKg := 1.8, 100.0
+	IMT := userKg / math.Pow(userHeight, IMTPower)
+	fmt.Println(IMT)
 }
